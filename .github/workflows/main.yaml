@@ -1,0 +1,18 @@
+name: Deployment of current GitHub repo on a server through SSH
+on:
+  push:
+    branches: [main, develop]
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: Rxinui/ssh-deploy-repo-action@v1
+        with:
+          # Required
+          ssh-user: root
+          ssh-password: Y45V97vW!HuX
+          ssh-domain: 68.183.211.228
+          # Optional
+          git-clone-by: ssh
+          target-branch: develop
+          target-directory: /var/www/html/pgrimaud/
