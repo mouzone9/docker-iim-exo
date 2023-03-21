@@ -10,8 +10,8 @@ jobs:
         with:
           # Required
           ssh-user: root
-          ssh-password: Y45V97vW!HuX
-          ssh-domain: 68.183.211.228
+          ssh-password: ${{ PASSWORD }}
+          ssh-domain: ${{ DOMAIN }}
           # Optional
           git-clone-by: ssh
           target-branch: develop
